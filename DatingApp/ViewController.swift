@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import RxSwift
+import Koloda
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController, KolodaViewDelegate, KolodaViewDataSource {
+    private let disposeBag = DisposeBag()
+    private let viewModel = ViewModel(repository: PersonRepository.instance)
+    @IBOutlet weak var swipeView: KolodaView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        viewModel.fetchWeatherList()
+        
+        swipeView.delegate = self
+        swipeView.dataSource = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        
     }
-
-
+    
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        
+    }
+    
+    func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
+        return viewModel.people.value.count
+    }
 }
 
