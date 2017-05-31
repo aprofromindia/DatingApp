@@ -40,6 +40,12 @@ final class PersonSwipeView: MDCSwipeToChooseView {
         let view = Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         addSubview(view)
+        
+        self.likedView.center = center
+        self.nopeView.center = center
+        addSubview(likedView)
+        addSubview(nopeView)
+        
         setupPerson()
     }
 

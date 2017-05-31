@@ -10,7 +10,6 @@ target 'DatingApp' do
     pod 'RxSwift', '~> 3.4.1'
     pod 'RxCocoa', '~> 3.4.1'
     pod 'Kingfisher', '~> 3.9.1'
-    pod 'Koloda', '~> 4.1'
     pod 'MDCSwipeToChoose', '~> 0.2.3'
     
     target 'DatingAppTests' do
