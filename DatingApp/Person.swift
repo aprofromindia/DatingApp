@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Person {
+struct Person {
     let age: UInt
     let city: String
     let firstName: String
@@ -19,19 +19,4 @@ final class Person {
     let isSmoker: Bool
     let postCode: Int
     let images: [String]
-
-    init(age: UInt, city: String, firstName: String, id: String,
-         job: String, name: String, wantChildren: Bool,
-         isSmoker: Bool, postCode: Int, images: [String]) {
-        self.age = age
-        self.city = city
-        self.firstName = firstName
-        self.id = id
-        self.job = job
-        self.name = name
-        self.wantChildren = wantChildren
-        self.isSmoker = isSmoker
-        self.postCode = postCode
-        self.images = images
-    }
 }
