@@ -19,9 +19,11 @@ final class Person {
     let isSmoker: Bool
     let postCode: Int
     let images: [String]
-    
-    init(age: Int, city: String, firstName: String, id: String, job: String, name: String,
-         wantChildren: Bool, isSmoker: Bool, postCode: Int, images: [String]) {
+
+    init(age: Int, city: String, firstName: String,
+         id: String, job: String, name: String,
+         wantChildren: Bool, isSmoker: Bool,
+         postCode: Int, images: [String]) {
         self.age = age
         self.city = city
         self.firstName = firstName

@@ -19,6 +19,8 @@
 		DD90711D1ED7792300234DD6 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90711C1ED7792300234DD6 /* PersonRepository.swift */; };
 		DD90711F1ED77ACD00234DD6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90711E1ED77ACD00234DD6 /* Person.swift */; };
 		DD9071211ED9830500234DD6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9071201ED9830500234DD6 /* ViewModel.swift */; };
+		DD9071281EDC238200234DD6 /* PersonSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9071271EDC238200234DD6 /* PersonSwipeView.swift */; };
+		DD90712A1EDC241100234DD6 /* PersonSwipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9071291EDC241100234DD6 /* PersonSwipeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		DD90711C1ED7792300234DD6 /* PersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		DD90711E1ED77ACD00234DD6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DD9071201ED9830500234DD6 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DD9071271EDC238200234DD6 /* PersonSwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSwipeView.swift; sourceTree = "<group>"; };
+		DD9071291EDC241100234DD6 /* PersonSwipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonSwipeView.xib; sourceTree = "<group>"; };
 		E13C81CD095C2EB00DE6CAC4 /* Pods-DatingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatingApp/Pods-DatingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F74186AB79A0E77AF617708B /* Pods-DatingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatingApp/Pods-DatingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,11 +121,9 @@
 		DD9070F91ED773F300234DD6 /* DatingApp */ = {
 			isa = PBXGroup;
 			children = (
-				DD90711A1ED7749C00234DD6 /* RESTClient.swift */,
-				DD90711E1ED77ACD00234DD6 /* Person.swift */,
-				DD90711C1ED7792300234DD6 /* PersonRepository.swift */,
-				DD9071201ED9830500234DD6 /* ViewModel.swift */,
-				DD9070FC1ED773F300234DD6 /* ViewController.swift */,
+				DD9071251EDC0BCE00234DD6 /* HTTP */,
+				DD9071241EDC0BC600234DD6 /* Person */,
+				DD9071261EDC0BD500234DD6 /* Views */,
 				DD9070FA1ED773F300234DD6 /* AppDelegate.swift */,
 				DD9070FE1ED773F300234DD6 /* Main.storyboard */,
 				DD9071011ED773F300234DD6 /* Assets.xcassets */,
@@ -138,6 +140,34 @@
 				DD9071111ED773F300234DD6 /* Info.plist */,
 			);
 			path = DatingAppTests;
+			sourceTree = "<group>";
+		};
+		DD9071241EDC0BC600234DD6 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				DD90711E1ED77ACD00234DD6 /* Person.swift */,
+				DD90711C1ED7792300234DD6 /* PersonRepository.swift */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
+		DD9071251EDC0BCE00234DD6 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				DD90711A1ED7749C00234DD6 /* RESTClient.swift */,
+			);
+			name = HTTP;
+			sourceTree = "<group>";
+		};
+		DD9071261EDC0BD500234DD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD9071201ED9830500234DD6 /* ViewModel.swift */,
+				DD9070FC1ED773F300234DD6 /* ViewController.swift */,
+				DD9071271EDC238200234DD6 /* PersonSwipeView.swift */,
+				DD9071291EDC241100234DD6 /* PersonSwipeView.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +261,7 @@
 			files = (
 				DD9071051ED773F300234DD6 /* LaunchScreen.storyboard in Resources */,
 				DD9071021ED773F300234DD6 /* Assets.xcassets in Resources */,
+				DD90712A1EDC241100234DD6 /* PersonSwipeView.xib in Resources */,
 				DD9071001ED773F300234DD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +376,7 @@
 				DD90711F1ED77ACD00234DD6 /* Person.swift in Sources */,
 				DD90711D1ED7792300234DD6 /* PersonRepository.swift in Sources */,
 				DD9070FD1ED773F300234DD6 /* ViewController.swift in Sources */,
+				DD9071281EDC238200234DD6 /* PersonSwipeView.swift in Sources */,
 				DD90711B1ED7749C00234DD6 /* RESTClient.swift in Sources */,
 				DD9071211ED9830500234DD6 /* ViewModel.swift in Sources */,
 				DD9070FB1ED773F300234DD6 /* AppDelegate.swift in Sources */,
@@ -435,6 +467,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -477,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
