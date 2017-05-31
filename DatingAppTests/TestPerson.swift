@@ -17,7 +17,7 @@ class TestPerson: XCTestCase {
                         images: ["image1", "image2", "image3"])
     
     func testInit() {
-        XCTAssert(person.age == 40)
+        XCTAssertEqual(person.age, 40)
         XCTAssert((person.age as Any) is UInt)
         XCTAssertFalse(((person.age as Any) is Int))
         
@@ -28,6 +28,6 @@ class TestPerson: XCTestCase {
         XCTAssertEqual(person.firstName, "Tom")
         XCTAssertEqual(person.images.count, 3)
         XCTAssertFalse(person.isSmoker)
-        XCTAssert(person.wantChildren)
+        XCTAssertTrue(person.wantChildren)
     }
 }

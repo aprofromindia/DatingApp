@@ -21,13 +21,13 @@ class TestViewModel: XCTestCase {
         XCTAssertFalse(viewModel.networkReqOngoing.value)
         
         XCTAssert((viewModel.people.value as Any) is [Person])
-        XCTAssert(viewModel.people.value.isEmpty)
+        XCTAssertTrue(viewModel.people.value.isEmpty)
     }
     
     func testGetWildCards() {
-        XCTAssert(!viewModel.networkReqOngoing.value)
+        XCTAssertFalse(viewModel.networkReqOngoing.value)
         XCTAssertEqual(viewModel.currentPersonIndex.value, 0)
-        XCTAssert(viewModel.people.value.isEmpty)
+        XCTAssertTrue(viewModel.people.value.isEmpty)
         
         let expect = expectation(description: "fetching wild cards.")
         
