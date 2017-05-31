@@ -50,13 +50,11 @@ final class PersonSwipeView: MDCSwipeToChooseView {
     }
 
     private func setupPerson() {
-        let firstName = person.name.components(separatedBy: " ").first ?? ""
-        
         personImage.kf.setImage(with: URL(string: person.images.first ?? ""))
-        nameLabel.text = "\(firstName), \(person.age)"
+        nameLabel.text = "\(person.firstName), \(person.age)"
         employmentLabel.text = "\(NSLocalizedString("Employment", comment: "")) - \(person.job)"
         smokingLabel.text = "\(NSLocalizedString("Smoker", comment: "")) - \(person.isSmoker ? NSLocalizedString("Yes", comment: "") : NSLocalizedString("No", comment: ""))"
         childLabel.text = "\(NSLocalizedString("Want children", comment: "")) - \(person.wantChildren ? NSLocalizedString("Yes", comment: "") : NSLocalizedString("No", comment: ""))"
-        bottomLabel.text = "\(NSLocalizedString("What you should know about", comment: "")) \(firstName)"
+        bottomLabel.text = "\(NSLocalizedString("What you should know about", comment: "")) \(person.firstName)"
     }
 }

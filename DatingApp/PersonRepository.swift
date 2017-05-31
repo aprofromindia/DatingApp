@@ -18,7 +18,7 @@ final class PersonRepository {
 
     private init() { }
 
-    func getPeople(completion: @escaping ([Person]) -> Void) {
+    func getWildCards(completion: @escaping ([Person]) -> Void) {
         restClient.getRequest(url: urlString) { [weak self] data in
 
             DispatchQueue.global(qos: .userInitiated).async {
@@ -26,7 +26,7 @@ final class PersonRepository {
 
                 for person in results {
 
-                    let person = Person(age: person["age"].intValue,
+                    let person = Person(age: person["age"].uIntValue,
                                         city: person["city"].stringValue,
                                         firstName: person["firstname"].stringValue,
                                         id: person["id"].stringValue,

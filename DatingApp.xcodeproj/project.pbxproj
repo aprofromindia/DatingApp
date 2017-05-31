@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0FF4E51420BC6A17C5315A2C /* Pods_DatingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B8581C73FB774817E58F44 /* Pods_DatingAppTests.framework */; };
 		39E3A7EDA8812EF3F2F0A709 /* Pods_DatingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447971D19084D7BF45C582D4 /* Pods_DatingApp.framework */; };
+		DD42DDB81EDF46A1007D312E /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDB71EDF46A1007D312E /* TestViewModel.swift */; };
+		DD42DDBC1EDF471B007D312E /* TestPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDBB1EDF471B007D312E /* TestPersonRepository.swift */; };
+		DD42DDBE1EDF4B4F007D312E /* TestPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDBD1EDF4B4F007D312E /* TestPerson.swift */; };
 		DD9070FB1ED773F300234DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9070FA1ED773F300234DD6 /* AppDelegate.swift */; };
 		DD9070FD1ED773F300234DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9070FC1ED773F300234DD6 /* ViewController.swift */; };
 		DD9071001ED773F300234DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9070FE1ED773F300234DD6 /* Main.storyboard */; };
 		DD9071021ED773F300234DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9071011ED773F300234DD6 /* Assets.xcassets */; };
 		DD9071051ED773F300234DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9071031ED773F300234DD6 /* LaunchScreen.storyboard */; };
-		DD9071101ED773F300234DD6 /* DatingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90710F1ED773F300234DD6 /* DatingAppTests.swift */; };
 		DD90711B1ED7749C00234DD6 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90711A1ED7749C00234DD6 /* RESTClient.swift */; };
 		DD90711D1ED7792300234DD6 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90711C1ED7792300234DD6 /* PersonRepository.swift */; };
 		DD90711F1ED77ACD00234DD6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90711E1ED77ACD00234DD6 /* Person.swift */; };
@@ -38,6 +40,9 @@
 		6E7EAC77EA21A8982DB96951 /* Pods-DatingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatingAppTests/Pods-DatingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B8581C73FB774817E58F44 /* Pods_DatingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB82240F77D4E9E3F827F93C /* Pods-DatingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatingAppTests/Pods-DatingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD42DDB71EDF46A1007D312E /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		DD42DDBB1EDF471B007D312E /* TestPersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPersonRepository.swift; sourceTree = "<group>"; };
+		DD42DDBD1EDF4B4F007D312E /* TestPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPerson.swift; sourceTree = "<group>"; };
 		DD9070F71ED773F300234DD6 /* DatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9070FA1ED773F300234DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD9070FC1ED773F300234DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 		DD9071041ED773F300234DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD9071061ED773F300234DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD90710B1ED773F300234DD6 /* DatingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD90710F1ED773F300234DD6 /* DatingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingAppTests.swift; sourceTree = "<group>"; };
 		DD9071111ED773F300234DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD90711A1ED7749C00234DD6 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		DD90711C1ED7792300234DD6 /* PersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
@@ -136,8 +140,10 @@
 		DD90710E1ED773F300234DD6 /* DatingAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD90710F1ED773F300234DD6 /* DatingAppTests.swift */,
 				DD9071111ED773F300234DD6 /* Info.plist */,
+				DD42DDBD1EDF4B4F007D312E /* TestPerson.swift */,
+				DD42DDB71EDF46A1007D312E /* TestViewModel.swift */,
+				DD42DDBB1EDF471B007D312E /* TestPersonRepository.swift */,
 			);
 			path = DatingAppTests;
 			sourceTree = "<group>";
@@ -387,7 +393,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD9071101ED773F300234DD6 /* DatingAppTests.swift in Sources */,
+				DD42DDBE1EDF4B4F007D312E /* TestPerson.swift in Sources */,
+				DD42DDBC1EDF471B007D312E /* TestPersonRepository.swift in Sources */,
+				DD42DDB81EDF46A1007D312E /* TestViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

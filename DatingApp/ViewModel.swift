@@ -11,18 +11,18 @@ import RxSwift
 
 final class ViewModel {
     private let _repository: PersonRepository
-    
+
     var people = Variable([Person]())
     var currentPersonIndex = Variable(0)
-    var networkReqOngoing = Variable(true)
+    var networkReqOngoing = Variable(false)
 
     init(repository: PersonRepository) {
         _repository = repository
     }
 
-    func fetchWeatherList() {
+    func fetchWildCards() {
         networkReqOngoing.value = true
-        _repository.getPeople { [weak self] people in
+        _repository.getWildCards { [weak self] people in
             self?.people.value = people
             self?.networkReqOngoing.value = false
         }

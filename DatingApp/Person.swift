@@ -9,7 +9,7 @@
 import Foundation
 
 final class Person {
-    let age: Int
+    let age: UInt
     let city: String
     let firstName: String
     let id: String
@@ -20,10 +20,9 @@ final class Person {
     let postCode: Int
     let images: [String]
 
-    init(age: Int, city: String, firstName: String,
-         id: String, job: String, name: String,
-         wantChildren: Bool, isSmoker: Bool,
-         postCode: Int, images: [String]) {
+    init(age: UInt, city: String, firstName: String, id: String,
+         job: String, name: String, wantChildren: Bool,
+         isSmoker: Bool, postCode: Int, images: [String]) {
         self.age = age
         self.city = city
         self.firstName = firstName

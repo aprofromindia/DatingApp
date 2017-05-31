@@ -23,7 +23,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        viewModel.fetchWeatherList()
+        viewModel.fetchWildCards()
 
         setupNetworkActivityIndicator()
         setupWildCardLabel()
@@ -33,9 +33,9 @@ final class ViewController: UIViewController {
     private func setupSwipeView() {
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
-        options.likedText = NSLocalizedString("Yes", comment: "")
+        options.likedText = NSLocalizedString("Like", comment: "")
         options.likedColor = UIColor.green
-        options.nopeText = NSLocalizedString("No", comment: "")
+        options.nopeText = NSLocalizedString("Nope", comment: "")
         options.nopeColor = UIColor.red
 
         let rect = self.view.bounds
