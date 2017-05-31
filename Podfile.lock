@@ -1,0 +1,31 @@
+PODS:
+  - Kingfisher (3.9.1)
+  - Koloda (4.1):
+    - pop (~> 1.0)
+  - MDCSwipeToChoose (0.2.3)
+  - pop (1.0.9)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Kingfisher (~> 3.9.1)
+  - Koloda (~> 4.1)
+  - MDCSwipeToChoose (~> 0.2.3)
+  - RxCocoa (~> 3.4.1)
+  - RxSwift (~> 3.4.1)
+  - SwiftyJSON (~> 3.1.4)
+
+SPEC CHECKSUMS:
+  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
+  Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 48e39a7569e35ad69f80d13d2d43a92def2dc90a
+
+COCOAPODS: 1.2.1
