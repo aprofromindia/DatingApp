@@ -10,15 +10,16 @@ import XCTest
 @testable import DatingApp
 
 class TestPersonRepository: XCTestCase {
-    
+
     let repository = PersonRepository.instance
-    
+
     func testGetWildCards() {
         let expect = expectation(description: "Get wild cards")
-        
+
         repository.getWildCards { people in
             XCTAssert((people as Any) is [Person])
             XCTAssertGreaterThan(people.count, 0)
+//            XCTAssertEqual(people.count, 2 * 50) // Swift singleton workaround and no current alternatives
             expect.fulfill()
         }
         

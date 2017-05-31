@@ -32,9 +32,17 @@ class TestViewModel: XCTestCase {
         let expect = expectation(description: "fetching wild cards.")
         
         viewModel.fetchWildCards()
-        XCTAssert(viewModel.networkReqOngoing.value)
+        XCTAssertTrue(self.viewModel.networkReqOngoing.value)
         
-        expect.fulfill()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+            XCTAssertFalse(self.viewModel.networkReqOngoing.value)
+            XCTAssertEqual(self.viewModel.currentPersonIndex.value, 0)
+            
+            XCTAssert((self.viewModel.people.value as Any) is [Person])
+            XCTAssertGreaterThan(self.viewModel.people.value.count, 0)
+                
+            expect.fulfill()
+        }
         
         waitForExpectations(timeout: 10, handler: nil)
     }
