@@ -11,7 +11,10 @@ import RxSwift
 import RxCocoa
 import MDCSwipeToChoose
 
-private let cardsToShow = 3
+private let kCardsToShow = 3
+private let kMargin: CGFloat = 10
+private let kTopBottomMargin: CGFloat = 100
+private let kCardHeightDiff: CGFloat = 5
 
 final class ViewController: UIViewController {
 
@@ -43,7 +46,10 @@ final class ViewController: UIViewController {
         viewModel.people.asDriver().drive(onNext: { [unowned self] people in
             for (index, person) in people.prefix(3).enumerated() {
                 let swipeView = PersonSwipeView(person: person,
-                                                frame: CGRect(x: CGFloat(10), y: CGFloat(100 - index * 5), width: rect.width - 20, height: rect.height - 200),
+                                                frame: CGRect(x: kMargin,
+                                                              y: CGFloat(kTopBottomMargin - (CGFloat(index) * kCardHeightDiff)),
+                                                              width: rect.width - (2 * kMargin),
+                                                              height: rect.height - (2 * kTopBottomMargin)),
                                                 options: options)
                 self.view.insertSubview(swipeView, at: 0)
                 self.swipeViews.append(swipeView)
@@ -52,15 +58,17 @@ final class ViewController: UIViewController {
         }).addDisposableTo(disposeBag)
 
         viewModel.currentPersonIndex.asDriver().filter({ [unowned self] idx in
-            self.viewModel.people.value.count >= idx + cardsToShow
+            self.viewModel.people.value.count >= idx + kCardsToShow
         }).drive(onNext: { [unowned self] idx in
 
             for (idx, view) in self.swipeViews.enumerated() {
-                view.frame.origin = CGPoint(x: 10, y: 100 - idx * 5)
+                view.frame.origin = CGPoint(x: kMargin, y: kTopBottomMargin - (CGFloat(idx) * kCardHeightDiff))
             }
 
-            let swipeView = PersonSwipeView(person: self.viewModel.people.value[idx + cardsToShow - 1],
-                                            frame: CGRect(x: 10, y: 90, width: rect.width - 20, height: rect.height - 200),
+            let swipeView = PersonSwipeView(person: self.viewModel.people.value[idx + kCardsToShow - 1],
+                                            frame: CGRect(x: kMargin, y: (kTopBottomMargin - kMargin),
+                                                          width: rect.width - (2 * kMargin),
+                                                          height: rect.height - (2 * kTopBottomMargin)),
                                             options: options)
             self.swipeViews.append(swipeView)
             self.view.insertSubview(swipeView, at: 0)
