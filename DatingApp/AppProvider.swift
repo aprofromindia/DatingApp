@@ -18,7 +18,7 @@ class AppProvider {
         return RESTClient(urlSession: provideUrlSession())
     }
     
-    static func provideUrlSession() -> URLSession {
+    private static func provideUrlSession() -> URLSession {
         return URLSession.shared
     }
 }

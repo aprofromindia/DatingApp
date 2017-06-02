@@ -76,8 +76,7 @@ final class ViewController: UIViewController {
 
     private func setupWildCardLabel() {
         viewModel.currentPersonIndex.asDriver().drive(onNext: { [unowned self] idx in
-            self.wildCardLabel.text = NSLocalizedString("\(self.viewModel.people.value.count - idx) wildcard matches remaining.",
-                                                        comment: "")
+            self.wildCardLabel.text = NSLocalizedString("\(self.viewModel.people.value.count - idx) wildcard matches remaining.", comment: "")
         }).addDisposableTo(disposeBag)
     }
 }
