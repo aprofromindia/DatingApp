@@ -12,7 +12,7 @@ import RxSwift
 
 class TestViewModel: XCTestCase {
     
-    let viewModel = ViewModel(repository: PersonRepository.instance)
+    let viewModel = ViewModel(repository: AppProvider.providePersonRepository())
     
     func testInit() {
         XCTAssert((viewModel as Any) is ViewModel)
@@ -39,7 +39,7 @@ class TestViewModel: XCTestCase {
             XCTAssertEqual(self.viewModel.currentPersonIndex.value, 0)
             
             XCTAssert((self.viewModel.people.value as Any) is [Person])
-            XCTAssertGreaterThan(self.viewModel.people.value.count, 0)
+            XCTAssertEqual(self.viewModel.people.value.count, 50)
                 
             expect.fulfill()
         }

@@ -12,11 +12,12 @@ import SwiftyJSON
 private let urlString = "http://devrecruitmentapi-affinitasplaygroundstaticbucket-13lxtfh91eyhc.s3-website-eu-west-1.amazonaws.com/"
 
 final class PersonRepository {
-    static let instance = PersonRepository()
-    let restClient = RESTClient.shared
+    private let restClient: RESTClient
     var people = [Person]()
-
-    private init() { }
+    
+    init(restClient: RESTClient) {
+        self.restClient = restClient
+    }
 
     func getWildCards(completion: @escaping ([Person]) -> Void) {
         restClient.getRequest(url: urlString) { [weak self] data in

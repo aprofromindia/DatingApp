@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0FF4E51420BC6A17C5315A2C /* Pods_DatingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B8581C73FB774817E58F44 /* Pods_DatingAppTests.framework */; };
 		39E3A7EDA8812EF3F2F0A709 /* Pods_DatingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447971D19084D7BF45C582D4 /* Pods_DatingApp.framework */; };
+		DD1A42451EE1E32000F1949E /* AppProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A42441EE1E32000F1949E /* AppProvider.swift */; };
+		DD1A42471EE1E4E100F1949E /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A42461EE1E4E100F1949E /* ViewProvider.swift */; };
 		DD42DDB81EDF46A1007D312E /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDB71EDF46A1007D312E /* TestViewModel.swift */; };
 		DD42DDBC1EDF471B007D312E /* TestPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDBB1EDF471B007D312E /* TestPersonRepository.swift */; };
 		DD42DDBE1EDF4B4F007D312E /* TestPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DDBD1EDF4B4F007D312E /* TestPerson.swift */; };
@@ -40,6 +42,8 @@
 		6E7EAC77EA21A8982DB96951 /* Pods-DatingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatingAppTests/Pods-DatingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B8581C73FB774817E58F44 /* Pods_DatingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB82240F77D4E9E3F827F93C /* Pods-DatingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatingAppTests/Pods-DatingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD1A42441EE1E32000F1949E /* AppProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProvider.swift; sourceTree = "<group>"; };
+		DD1A42461EE1E4E100F1949E /* ViewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		DD42DDB71EDF46A1007D312E /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DD42DDBB1EDF471B007D312E /* TestPersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPersonRepository.swift; sourceTree = "<group>"; };
 		DD42DDBD1EDF4B4F007D312E /* TestPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPerson.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DD1A42481EE1E6E000F1949E /* PersonSwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				DD9071271EDC238200234DD6 /* PersonSwipeView.swift */,
+				DD9071291EDC241100234DD6 /* PersonSwipeView.xib */,
+			);
+			name = PersonSwipeView;
+			sourceTree = "<group>";
+		};
 		DD9070EE1ED773F200234DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 				DD9071241EDC0BC600234DD6 /* Person */,
 				DD9071261EDC0BD500234DD6 /* Views */,
 				DD9070FA1ED773F300234DD6 /* AppDelegate.swift */,
+				DD1A42441EE1E32000F1949E /* AppProvider.swift */,
 				DD9070FE1ED773F300234DD6 /* Main.storyboard */,
 				DD9071011ED773F300234DD6 /* Assets.xcassets */,
 				DD9071031ED773F300234DD6 /* LaunchScreen.storyboard */,
@@ -168,10 +182,10 @@
 		DD9071261EDC0BD500234DD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD1A42481EE1E6E000F1949E /* PersonSwipeView */,
 				DD9071201ED9830500234DD6 /* ViewModel.swift */,
 				DD9070FC1ED773F300234DD6 /* ViewController.swift */,
-				DD9071271EDC238200234DD6 /* PersonSwipeView.swift */,
-				DD9071291EDC241100234DD6 /* PersonSwipeView.xib */,
+				DD1A42461EE1E4E100F1949E /* ViewProvider.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -379,12 +393,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1A42451EE1E32000F1949E /* AppProvider.swift in Sources */,
 				DD90711F1ED77ACD00234DD6 /* Person.swift in Sources */,
 				DD90711D1ED7792300234DD6 /* PersonRepository.swift in Sources */,
 				DD9070FD1ED773F300234DD6 /* ViewController.swift in Sources */,
 				DD9071281EDC238200234DD6 /* PersonSwipeView.swift in Sources */,
 				DD90711B1ED7749C00234DD6 /* RESTClient.swift in Sources */,
 				DD9071211ED9830500234DD6 /* ViewModel.swift in Sources */,
+				DD1A42471EE1E4E100F1949E /* ViewProvider.swift in Sources */,
 				DD9070FB1ED773F300234DD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

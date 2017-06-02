@@ -9,11 +9,12 @@
 import UIKit
 
 struct RESTClient {
-
-    static let shared = RESTClient()
-    let urlSession = URLSession.shared
-
-    private init() { }
+    
+    private let urlSession: URLSession
+    
+    init(urlSession: URLSession) {
+        self.urlSession = urlSession
+    }
 
     func getRequest(url: String, completion: @escaping (Data) -> Void) {
 

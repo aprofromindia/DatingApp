@@ -16,7 +16,7 @@ private let cardsToShow = 3
 final class ViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
-    fileprivate let viewModel = ViewModel(repository: PersonRepository.instance)
+    fileprivate let viewModel = ViewProvider.provideVM()
     fileprivate var swipeViews = [PersonSwipeView]() // TODO: - use/implement a queue
     @IBOutlet private var wildCardLabel: UILabel!
 
