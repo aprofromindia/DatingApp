@@ -10,12 +10,15 @@ import UIKit
 
 class AppProvider {
     
+    private static let restClient = RESTClient(urlSession: provideUrlSession())
+    private static let personRepository = PersonRepository(restClient: restClient)
+    
     static func providePersonRepository() -> PersonRepository {
-        return PersonRepository(restClient: provideRestClient())
+        return personRepository
     }
     
     static func provideRestClient() -> RESTClient {
-        return RESTClient(urlSession: provideUrlSession())
+        return restClient
     }
     
     private static func provideUrlSession() -> URLSession {
