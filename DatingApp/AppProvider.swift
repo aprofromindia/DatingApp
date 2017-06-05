@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AppProvider {
+struct AppProvider {
     
     private static let restClient = RESTClient(urlSession: provideUrlSession())
-    private static let personRepository = PersonRepository(restClient: restClient)
+    private static let personRepository = PersonRepository(restClient: provideRestClient())
     
     static func providePersonRepository() -> PersonRepository {
         return personRepository

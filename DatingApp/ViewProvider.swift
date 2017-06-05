@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewProvider {
+struct ViewProvider {
     
     static func provideVM() -> ViewModel {
         return ViewModel(repository: AppProvider.providePersonRepository())
