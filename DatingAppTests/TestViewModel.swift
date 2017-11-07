@@ -12,7 +12,7 @@ import RxSwift
 
 class TestViewModel: XCTestCase {
     
-    let viewModel = ViewModel(repository: AppProvider.providePersonRepository())
+    let viewModel = ViewModel(repository: AppProvider.personRepository)
     
     func testInit() {
         XCTAssert((viewModel as Any) is ViewModel)

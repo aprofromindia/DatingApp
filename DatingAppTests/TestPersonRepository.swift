@@ -11,7 +11,7 @@ import XCTest
 
 class TestPersonRepository: XCTestCase {
 
-    let repository = PersonRepository(restClient: AppProvider.provideRestClient())
+    let repository = PersonRepository(restClient: AppProvider.restClient)
 
     func testGetWildCards() {
         let expect = expectation(description: "Get wild cards")

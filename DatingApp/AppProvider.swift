@@ -10,18 +10,7 @@ import UIKit
 
 struct AppProvider {
     
-    private static let restClient = RESTClient(urlSession: provideUrlSession())
-    private static let personRepository = PersonRepository(restClient: provideRestClient())
-    
-    static func providePersonRepository() -> PersonRepository {
-        return personRepository
-    }
-    
-    static func provideRestClient() -> RESTClient {
-        return restClient
-    }
-    
-    private static func provideUrlSession() -> URLSession {
-        return URLSession.shared
-    }
+    static let restClient = RESTClient(urlSession: AppProvider.urlSession)
+    static let personRepository = PersonRepository(restClient: AppProvider.restClient)
+    private static let urlSession = URLSession.shared
 }

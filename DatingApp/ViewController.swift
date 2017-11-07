@@ -19,7 +19,7 @@ private let kCardHeightDiff: CGFloat = 5
 final class ViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
-    fileprivate let viewModel = ViewProvider.provideVM()
+    fileprivate let viewModel = ViewProvider.viewModel
     fileprivate var swipeViews = [PersonSwipeView]() // TODO: - use/implement a queue
     @IBOutlet private var wildCardLabel: UILabel!
     

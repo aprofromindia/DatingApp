@@ -9,8 +9,5 @@
 import UIKit
 
 struct ViewProvider {
-    
-    static func provideVM() -> ViewModel {
-        return ViewModel(repository: AppProvider.providePersonRepository())
-    }
+    static let viewModel = ViewModel(repository: AppProvider.personRepository)
 }
